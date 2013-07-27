@@ -31,4 +31,8 @@ public class Book extends Model {
 
     public static Finder<Long,Book> finderBook = new Finder(Long.class,Book.class);
 
+    public static Book getByIsbn(Long isbn) {
+        return finderBook.where().eq("isbn", isbn).findUnique();
+    }
+
 }

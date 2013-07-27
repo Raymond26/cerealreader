@@ -20,9 +20,11 @@ create table rmember (
 create table read (
   id                        bigint not null,
   rmember_id                bigint,
+  start_date                timestamp,
   finish_date               timestamp,
   rating                    integer,
   review                    varchar(255),
+  current_thoughts          varchar(255),
   book_id                   bigint,
   constraint pk_read primary key (id))
 ;
