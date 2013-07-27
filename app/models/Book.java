@@ -27,7 +27,11 @@ public class Book extends Model {
 
     @OneToMany(mappedBy = "book")
     @JsonIgnore
-    public List<Read> usersHaveRead = new ArrayList<Read>();
+    public List<FinishedRead> finishedReads = new ArrayList<FinishedRead>();
+
+    @OneToMany(mappedBy = "book")
+    @JsonIgnore
+    public List<CurrentRead> currentReads = new ArrayList<CurrentRead>();
 
     public static Finder<Long,Book> finderBook = new Finder(Long.class,Book.class);
 

@@ -20,8 +20,8 @@ public class LoadTestData {
         RMember m1 = new RMember("ray@gmail.com","lsdkfj");
         m1.save();
 
-        Read r1 = new Read(b1, DateTime.now(), "its ok");
-        Read r2 = new Read(b2, DateTime.now(), "this book fuckin sucks");
+        CurrentRead r1 = new CurrentRead(b1, DateTime.now(), "its ok");
+        CurrentRead r2 = new CurrentRead(b2, DateTime.now(), "this book fuckin sucks");
 
         m1.addCurrentReading(r1);
         m1.addCurrentReading(r2);

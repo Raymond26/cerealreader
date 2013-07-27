@@ -16,8 +16,10 @@ public class RMember extends Model {
     public Long id;
 
     @Constraints.Email
+    @JsonIgnore
     public String emailAddress;
 
+    @JsonIgnore
     public String facebookToken;
 
     public RMember() {}
@@ -29,22 +31,23 @@ public class RMember extends Model {
 
     @OneToMany(mappedBy = "rmember")
     @JsonIgnore
-    public List<Read> haveRead = new ArrayList<Read>();
+    public List<FinishedRead> finishedReading = new ArrayList<FinishedRead>();
 
     @OneToMany(mappedBy = "rmember")
     @JsonIgnore
-    public List<Read> currentlyReading = new ArrayList<Read>();
+    public List<CurrentRead> currentlyReading = new ArrayList<CurrentRead>();
+
+    @OneToMany(mappedBy = "rmember")
+    @JsonIgnore
+    public List<DesiredRead> desiredReading = new ArrayList<DesiredRead>();
 
     public static Finder<Long,RMember> finderMember = new Finder(
             Long.class, RMember.class
     );
 
-    public void addCurrentReading(Read read) {
-        /* Auto updates currentlyReading */
-        /*read.rmember = this;
-        read.save();*/
-        this.currentlyReading.add(read);
-        this.save();
+    public void addCurrentReading(CurrentRead currentRead) {
+        currentRead.rmember = this;
+        currentRead.save();
     }
 
     /*public void finishReading(Read read) {

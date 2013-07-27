@@ -10,6 +10,34 @@ create table book (
   constraint pk_book primary key (id))
 ;
 
+create table current_read (
+  id                        bigint not null,
+  start_date                timestamp,
+  current_thoughts          varchar(255),
+  rmember_id                bigint,
+  book_id                   bigint,
+  constraint pk_current_read primary key (id))
+;
+
+create table desired_read (
+  id                        bigint not null,
+  start_date                timestamp,
+  current_thoughts          varchar(255),
+  rmember_id                bigint,
+  book_id                   bigint,
+  constraint pk_desired_read primary key (id))
+;
+
+create table finished_read (
+  id                        bigint not null,
+  start_date                timestamp,
+  current_thoughts          varchar(255),
+  rmember_id                bigint,
+  book_id                   bigint,
+  finish_date               timestamp,
+  constraint pk_finished_read primary key (id))
+;
+
 create table rmember (
   id                        bigint not null,
   email_address             varchar(255),
@@ -19,26 +47,41 @@ create table rmember (
 
 create table read (
   id                        bigint not null,
-  rmember_id                bigint,
   start_date                timestamp,
-  finish_date               timestamp,
-  rating                    integer,
-  review                    varchar(255),
   current_thoughts          varchar(255),
+  rmember_id                bigint,
   book_id                   bigint,
   constraint pk_read primary key (id))
 ;
 
 create sequence book_seq;
 
+create sequence current_read_seq;
+
+create sequence desired_read_seq;
+
+create sequence finished_read_seq;
+
 create sequence rmember_seq;
 
 create sequence read_seq;
 
-alter table read add constraint fk_read_rmember_1 foreign key (rmember_id) references rmember (id);
-create index ix_read_rmember_1 on read (rmember_id);
-alter table read add constraint fk_read_book_2 foreign key (book_id) references book (id);
-create index ix_read_book_2 on read (book_id);
+alter table current_read add constraint fk_current_read_rmember_1 foreign key (rmember_id) references rmember (id);
+create index ix_current_read_rmember_1 on current_read (rmember_id);
+alter table current_read add constraint fk_current_read_book_2 foreign key (book_id) references book (id);
+create index ix_current_read_book_2 on current_read (book_id);
+alter table desired_read add constraint fk_desired_read_rmember_3 foreign key (rmember_id) references rmember (id);
+create index ix_desired_read_rmember_3 on desired_read (rmember_id);
+alter table desired_read add constraint fk_desired_read_book_4 foreign key (book_id) references book (id);
+create index ix_desired_read_book_4 on desired_read (book_id);
+alter table finished_read add constraint fk_finished_read_rmember_5 foreign key (rmember_id) references rmember (id);
+create index ix_finished_read_rmember_5 on finished_read (rmember_id);
+alter table finished_read add constraint fk_finished_read_book_6 foreign key (book_id) references book (id);
+create index ix_finished_read_book_6 on finished_read (book_id);
+alter table read add constraint fk_read_rmember_7 foreign key (rmember_id) references rmember (id);
+create index ix_read_rmember_7 on read (rmember_id);
+alter table read add constraint fk_read_book_8 foreign key (book_id) references book (id);
+create index ix_read_book_8 on read (book_id);
 
 
 
@@ -46,11 +89,23 @@ create index ix_read_book_2 on read (book_id);
 
 drop table if exists book cascade;
 
+drop table if exists current_read cascade;
+
+drop table if exists desired_read cascade;
+
+drop table if exists finished_read cascade;
+
 drop table if exists rmember cascade;
 
 drop table if exists read cascade;
 
 drop sequence if exists book_seq;
+
+drop sequence if exists current_read_seq;
+
+drop sequence if exists desired_read_seq;
+
+drop sequence if exists finished_read_seq;
 
 drop sequence if exists rmember_seq;
 

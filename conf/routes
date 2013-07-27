@@ -3,22 +3,25 @@
 # ~~~~
 
 # Home page
-GET         /                         controllers.Application.index()
+GET         /                                           controllers.Application.index()
 
 # User Controller
-GET         /users/reads              controllers.MemberController.getReads()
-GET         /users/finished           controllers.MemberController.getFinishedReading()
-GET         /users/current            controllers.MemberController.getCurrentlyReading()
-GET         /users/addcurrent         controllers.MemberController.addCurrentBook()
+GET         /users/:memberId                            controllers.MemberController.getUserProfile(memberId: Long)
+GET         /users/:memberId/books/finished             controllers.MemberController.getFinishedReading(memberId: Long)
+GET         /users/:memberId/books/current              controllers.MemberController.getCurrentlyReading(memberId: Long)
+GET         /users/:memberId/books/desired              controllers.MemberController.getDesiredReads(memberId: Long)
+GET         /users/:memberId/books/addcurrent           controllers.MemberController.addCurrentBook(memberId: Long)
 
 # Reads Controller
-GET         /reads/:id/comment        controllers.MemberController.setCurrentThoughts(id: Long)
+GET         /reads/:id/desiretocurrent                  controllers.MemberController.desiredToCurrentBook(id: Long)
+GET         /reads/:id/comment                          controllers.MemberController.setCurrentThoughts(id: Long)
+GET         /reads/:id/finish                           controllers.MemberController.finishedReading(id: Long)
 
 # Books Controller
-GET         /books                    controllers.BooksController.getBooks()
+GET         /books                                      controllers.BooksController.getBooks()
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file             controllers.Assets.at(path="/public", file)
+GET         /assets/*file                               controllers.Assets.at(path="/public", file)
 
 # Security & Registration
-POST        /api/register             controllers.SecurityController.registerUser()
+POST        /api/register                               controllers.SecurityController.registerUser()
