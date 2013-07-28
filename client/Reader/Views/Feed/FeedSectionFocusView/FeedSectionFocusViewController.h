@@ -15,4 +15,6 @@
 
 @property (retain) FeedSectionDTO *section;
 
+@property (retain) IBOutlet UITableView *tableView;
+
 @end

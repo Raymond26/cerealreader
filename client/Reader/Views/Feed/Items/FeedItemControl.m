@@ -36,6 +36,14 @@
 }
 
 - (void)setBook:(BookDTO*)book {
+	if ( !book ) {
+		self.alpha = 0;
+
+		return;
+	}
+
+	self.alpha = 1;
+
 	self.titleLabel.text = book.title;
 	self.authorLabel.text = book.author;
 

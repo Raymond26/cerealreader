@@ -11,6 +11,7 @@
 #import "FeedDTO.h"
 #import "FeedSectionDataSource.h"
 #import "UINavigationController+Extras.h"
+#import "FeedSectionFocusViewController.h"
 
 
 @implementation FeedViewController {
@@ -71,6 +72,13 @@
     
     [newFeedItems addObject:book];
 
+	book = [BookDTO new];
+	book.title = @"New book";
+	book.author = @"Moooo";
+	book.thumbnail = @"http://bks3.books.google.com/books?id=1lK3xA72adAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api";
+
+	[newFeedItems addObject:book];
+
 	[self addReaderNavigationItems];
 }
 
@@ -119,6 +127,7 @@
 	FeedSectionDTO *section = [_feedDTO.sections objectAtIndex:(NSUInteger)index];
 
 	UIButton *header = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 40.0)];
+	header.tag = index;
 	header.backgroundColor = [UIColor grayColor];
 
 	UILabel *textLabel = [[UILabel alloc] initWithFrame:header.frame];
@@ -135,12 +144,23 @@
 }
 
 - (void)sectionSelected:(UIView*)header {
-	[self performSegueWithIdentifier:@"ViewFeedSectionFocus" sender:self];
+	NSUInteger index = (NSUInteger)header.tag;
+
+	FeedSectionDTO *section = [_feedDTO.sections objectAtIndex:(NSUInteger)index];
+
+	UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+	FeedSectionFocusViewController * vc = [sb instantiateViewControllerWithIdentifier:@"FeedSectionFocusViewController"];
+
+	vc.section = section;
+
+	[vc.tableView reloadData];
+
+	[self.navigationController pushViewController:vc animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-return 40.0;
+	return 40.0;
 }
 
 

@@ -209,13 +209,17 @@
         <!--Feed Section Focus View Controller - Section-->
         <scene sceneID="icX-DX-Te6">
             <objects>
-                <viewController id="BbZ-gS-JoH" customClass="FeedSectionFocusViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedSectionFocusViewController" id="BbZ-gS-JoH" customClass="FeedSectionFocusViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mtG-Qm-PbJ">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MiF-C8-1eO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="298" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MiF-C8-1eO">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BbZ-gS-JoH" id="T1A-Cr-Dzh"/>
+                                    <outlet property="delegate" destination="BbZ-gS-JoH" id="7uB-MW-EXt"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -239,6 +243,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="MiF-C8-1eO" id="aIc-0v-csf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WgH-cS-CFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -276,6 +283,9 @@
     <classes>
         <class className="FeedSectionFocusViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FeedSectionFocusViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
         </class>
         <class className="FeedViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FeedViewController.h"/>

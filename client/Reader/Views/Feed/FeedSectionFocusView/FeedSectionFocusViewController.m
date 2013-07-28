@@ -22,13 +22,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
-	[self addReaderNavigationItems];
-}
+	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+	self.tableView.allowsSelection = NO;
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	[self addReaderNavigationItems];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -48,32 +45,41 @@
 	if ( !view ) {
 		static UINib *viewNib = nil;
 		if ( !viewNib ) {
-			viewNib = [UINib nibWithNibName:@"FeedItemSmallControl" bundle:[NSBundle mainBundle]];
+			viewNib = [UINib nibWithNibName:@"FeedItemControl" bundle:[NSBundle mainBundle]];
 		}
 
-		view = [[UITableViewCell alloc] initWithFrame:CGRectMake(0, 0, 320, 140)];
+		view = [[UITableViewCell alloc] initWithFrame:CGRectMake(0, 0, 320, 164)];
+		view.autoresizesSubviews = NO;
 
 		FeedItemControl *leftItem = [FeedItemControl itemFromNib:viewNib];
-		[view addSubview:leftItem];
 
 		CGRect itemFrame = leftItem.frame;
+		itemFrame.origin.x = 8;
+		itemFrame.origin.y = 4;
 
-		itemFrame.origin.x += itemFrame.size.width + 10;
+		leftItem.frame = itemFrame;
+
+		leftItem.tag = 100;
+		[view addSubview:leftItem];
+
+		itemFrame.origin.x += itemFrame.size.width + 8;
 
 		FeedItemControl *rightItem = [FeedItemControl itemFromNib:viewNib];
 		rightItem.frame = itemFrame;
+		rightItem.tag = 101;
 		[view addSubview:rightItem];
+
 	}
 
-	int index = [indexPath indexAtPosition:0];
+	int index = [indexPath indexAtPosition:1];
 
 	BookDTO *leftBook = [_section.items objectAtIndex:(NSUInteger)index*2];
-	FeedItemControl *leftItem = [[view subviews] objectAtIndex:0];
+	FeedItemControl *leftItem = (FeedItemControl*)[view viewWithTag:100];
 
 	[leftItem setBook:leftBook];
 
-	BookDTO *rightBook = [_section.items objectAtIndex:(NSUInteger)index*2+1];
-	FeedItemControl *rightItem = [[view subviews] objectAtIndex:1];
+	BookDTO *rightBook = ([_section.items count] > index*2+1) ? [_section.items objectAtIndex:(NSUInteger)index*2+1] : nil;
+	FeedItemControl *rightItem = (FeedItemControl*)[view viewWithTag:101];
 
 	[rightItem setBook:rightBook];
 
