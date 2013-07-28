@@ -48,6 +48,7 @@
 		   [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
 		   UITextAttributeTextShadowOffset,
 		   [UIFont fontWithName:@"Gotham-Book" size:21.0], UITextAttributeFont, nil]];
+
 }
 
 - (void)didReceiveMemoryWarning

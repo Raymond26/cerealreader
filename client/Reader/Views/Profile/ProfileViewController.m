@@ -10,6 +10,7 @@
 #import "CurrentlyReadingDataSource.h"
 #import "CallbackHandler.h"
 #import "UserProfileDTO.h"
+#import "UINavigationController+Extras.h"
 
 @interface ProfileViewController ()
 
@@ -27,13 +28,15 @@
         
     
     currentlyReadingView.scrollSpeed = 0.3;
-    currentlyReadingView.bounceDistance = 0.4;
+    currentlyReadingView.bounceDistance = 0.3;
+	currentlyReadingView.stopAtItemBoundary = YES;
 
     completedView.truncateFinalPage = YES;
     
-    //[[CallbackHandler instance] doRequestWithPath:@"/users/1" params:nil expectedDTO:[UserProfileDTO class] delegate:self successSelector:@selector(dataLoaded:) failureSelector:nil];
+    [[CallbackHandler instance] doRequestWithPath:@"/users/1" params:nil expectedDTO:[UserProfileDTO class] delegate:self successSelector:@selector(dataLoaded:) failureSelector:nil];
 
-	NSString *jString = @"{\"currentReading\":[{\"id\":3,\"startDate\":null,\"currentThoughts\":\"holy shit!!!! aesome\",\"book\":{\"id\":3,\"isbn\":12345,\"title\":\"awesome book\",\"authors\":null,\"description\":null,\"isbn_10\":null,\"pageCount\":null,\"averageRating\":null,\"ratingsCount\":null,\"thumbnail\":null}},{\"id\":2,\"startDate\":null,\"currentThoughts\":\"this book fuckin sucks\",\"book\":{\"id\":2,\"isbn\":1234,\"title\":\"shitty book\",\"authors\":null,\"description\":null,\"isbn_10\":null,\"pageCount\":null,\"averageRating\":null,\"ratingsCount\":null,\"thumbnail\":null}},{\"id\":1,\"startDate\":null,\"currentThoughts\":\"its ok\",\"book\":{\"id\":1,\"isbn\":123,\"title\":\"da book\",\"authors\":null,\"description\":null,\"isbn_10\":null,\"pageCount\":null,\"averageRating\":null,\"ratingsCount\":null,\"thumbnail\":null}}],\"finishedReading\":[{\"id\":2,\"startDate\":null,\"currentThoughts\":null,\"book\":{\"id\":5,\"isbn\":12,\"title\":\"comic book\",\"authors\":null,\"description\":null,\"isbn_10\":null,\"pageCount\":null,\"averageRating\":null,\"ratingsCount\":null,\"thumbnail\":null},\"finishDate\":1374978370840},{\"id\":1,\"startDate\":null,\"currentThoughts\":null,\"book\":{\"id\":4,\"isbn\":123456,\"title\":\"solutions manual\",\"authors\":null,\"description\":null,\"isbn_10\":null,\"pageCount\":null,\"averageRating\":null,\"ratingsCount\":null,\"thumbnail\":\"http://bks3.books.google.com/books?id=1lK3xA72adAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"},\"finishDate\":1374978370839}],\"user\":{\"id\":1,\"username\":\"ray123\"}}";
+    
+	/*NSString *jString = @"{\"currentReading\":[{\"id\":3,\"startDate\":null,\"currentThoughts\":\"holy shit!!!! aesome\",\"book\":{\"id\":3,\"isbn\":12345,\"title\":\"awesome book\",\"authors\":null,\"description\":null,\"isbn_10\":null,\"pageCount\":null,\"averageRating\":null,\"ratingsCount\":null,\"thumbnail\":null}},{\"id\":2,\"startDate\":null,\"currentThoughts\":\"this book fuckin sucks\",\"book\":{\"id\":2,\"isbn\":1234,\"title\":\"shitty book\",\"authors\":null,\"description\":null,\"isbn_10\":null,\"pageCount\":null,\"averageRating\":null,\"ratingsCount\":null,\"thumbnail\":null}},{\"id\":1,\"startDate\":null,\"currentThoughts\":\"its ok\",\"book\":{\"id\":1,\"isbn\":123,\"title\":\"da book\",\"authors\":null,\"description\":null,\"isbn_10\":null,\"pageCount\":null,\"averageRating\":null,\"ratingsCount\":null,\"thumbnail\":null}}],\"finishedReading\":[{\"id\":2,\"startDate\":null,\"currentThoughts\":null,\"book\":{\"id\":5,\"isbn\":12,\"title\":\"comic book\",\"authors\":null,\"description\":null,\"isbn_10\":null,\"pageCount\":null,\"averageRating\":null,\"ratingsCount\":null,\"thumbnail\":null},\"finishDate\":1374978370840},{\"id\":1,\"startDate\":null,\"currentThoughts\":null,\"book\":{\"id\":4,\"isbn\":123456,\"title\":\"solutions manual\",\"authors\":null,\"description\":null,\"isbn_10\":null,\"pageCount\":null,\"averageRating\":null,\"ratingsCount\":null,\"thumbnail\":\"http://bks3.books.google.com/books?id=1lK3xA72adAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"},\"finishDate\":1374978370839}],\"user\":{\"id\":1,\"username\":\"ray123\"}}";
 	NSData *data = [jString dataUsingEncoding:NSUTF8StringEncoding];
 	id JSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
 
@@ -43,7 +46,10 @@
 
 	NSLog( @"%@", dto.user.username);
 
-	[self dataLoaded:dto];
+	[self dataLoaded:dto];*/
+
+
+	[self addReaderNavigationItems];
     
     [self cloudScroll];
 
