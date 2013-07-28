@@ -7,7 +7,15 @@ create table book (
   id                        bigint not null,
   isbn                      bigint,
   title                     varchar(255),
-  image_url                 varchar(255),
+  authors                   varchar(255),
+  description               varchar(255),
+  isbn_10                   bigint,
+  page_count                integer,
+  average_rating            integer,
+  ratings_count             integer,
+  publisher                 varchar(255),
+  published_date            timestamp,
+  thumbnail                 varchar(255),
   constraint pk_book primary key (id))
 ;
 

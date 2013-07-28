@@ -3,6 +3,7 @@ package models;
 import javax.persistence.*;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.joda.time.DateTime;
 import play.db.ebean.Model;
 
 import java.util.ArrayList;
@@ -30,6 +31,10 @@ public class Book extends Model {
     public Integer averageRating;
 
     public Integer ratingsCount;
+
+    public String publisher;
+
+    public DateTime publishedDate;
 
     public String thumbnail;
 
