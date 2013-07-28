@@ -10,7 +10,7 @@
 #import "FeedItemControl.h"
 #import "FeedDTO.h"
 #import "FeedSectionDataSource.h"
-#import "UINavigationController+Extras.h"
+#import "UIViewController+Extras.h"
 #import "FeedSectionFocusViewController.h"
 #import "HardFeedDTO.h"
 #import "CallbackHandler.h"

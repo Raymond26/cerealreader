@@ -9,7 +9,7 @@
 #import "FeedSectionFocusViewController.h"
 #import "FeedItemControl.h"
 #import "BookDTO.h"
-#import "UINavigationController+Extras.h"
+#import "UIViewController+Extras.h"
 #import "AppDelegate.h"
 
 @interface FeedSectionFocusViewController ()
