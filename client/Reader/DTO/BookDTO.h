@@ -17,5 +17,6 @@
 @property (retain) NSString *thumbnail;
 @property (retain) NSNumber *averageRating;
 @property (retain) NSNumber *ratingsCount;
+@property (retain) NSString *description;
 
 @end

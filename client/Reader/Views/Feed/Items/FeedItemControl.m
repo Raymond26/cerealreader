@@ -9,8 +9,12 @@
 #import "FeedItemControl.h"
 #import "BookDTO.h"
 #import "AsyncImageView.h"
+#import "BookDetailViewController.h"
+#import "AppDelegate.h"
 
-@implementation FeedItemControl
+@implementation FeedItemControl {
+	BookDetailViewController *bookDetailViewController;
+}
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -36,6 +40,8 @@
 }
 
 - (void)setBook:(BookDTO*)book {
+	_book = book;
+
 	if ( !book ) {
 		self.alpha = 0;
 
@@ -59,9 +65,25 @@
 	else
 		imageURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Book1@2x" ofType:@"png"]];
 
+	self.imageView.showActivityIndicator = YES;
+	self.imageView.image = nil;
+
 	//cancel any previously loading images for this view
 	[[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:self.imageView];
 	self.imageView.imageURL = imageURL;
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	if ( !_book )
+		return;
+
+	bookDetailViewController = [[BookDetailViewController alloc] initWithNibName:@"BookDetailViewController" bundle:nil];
+
+	[bookDetailViewController setBook:_book];
+
+	UIViewController *mainVc = ((AppDelegate*)[[UIApplication sharedApplication] delegate]).currentViewController;
+
+    [bookDetailViewController addToView:mainVc.view];
 }
 
 /*

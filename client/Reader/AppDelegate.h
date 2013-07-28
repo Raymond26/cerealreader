@@ -12,4 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+//HACK HACK HACK
+@property (retain) UIViewController *currentViewController;
+
 @end

@@ -55,4 +55,12 @@
 }
 
 
+- (void)swipeView:(SwipeView *)swipeView didSelectItemAtIndex:(NSInteger)index {
+	FeedItemControl *item = (FeedItemControl*)[swipeView itemViewAtIndex:index];
+
+	[item touchesEnded:nil withEvent:nil];
+
+}
+
+
 @end

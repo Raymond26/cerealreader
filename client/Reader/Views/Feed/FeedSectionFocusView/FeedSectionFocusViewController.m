@@ -10,6 +10,7 @@
 #import "FeedItemControl.h"
 #import "BookDTO.h"
 #import "UINavigationController+Extras.h"
+#import "AppDelegate.h"
 
 @interface FeedSectionFocusViewController ()
 
@@ -26,6 +27,8 @@
 	self.tableView.allowsSelection = NO;
 
 	[self addReaderNavigationItems];
+
+	((AppDelegate*)[[UIApplication sharedApplication] delegate]).currentViewController = self;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
