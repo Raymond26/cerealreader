@@ -54,7 +54,8 @@
     view.titleLabel.text = book.title;
 	view.authorLabel.text = book.author;
 	view.messageLabel.text = item.currentThoughts;
-	//view.messageLabel.text = book.isbn
+	view.ratingControl.rating = [book.averageRating intValue];
+	view.ratingControl.ratingsCount = [book.ratingsCount intValue];
     
     //set image URL. AsyncImageView class will then dynamically load the image
 	NSURL *imageURL;
@@ -66,7 +67,7 @@
     
 	//cancel any previously loading images for this view
 	[[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:view.imageView];
-	view.imageView.imageURL = imageURL;    
+	view.imageView.imageURL = imageURL;
     
     return view;
 }

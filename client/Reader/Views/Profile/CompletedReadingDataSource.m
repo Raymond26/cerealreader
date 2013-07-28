@@ -39,8 +39,14 @@
 
 	if (view == nil)
 	{
-		view = [[[AsyncImageView alloc] initWithFrame:CGRectMake(0, 0, 58.0f, 100.0f)] autorelease];
-		view.contentMode = UIViewContentModeScaleAspectFit;
+        view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60.0f, 102.0f)];
+        view.backgroundColor = [UIColor lightGrayColor];
+        view.autoresizesSubviews = NO;
+        
+		AsyncImageView *imageView = [[[AsyncImageView alloc] initWithFrame:CGRectMake(1, 1, 58, 100.0f)] autorelease];
+		imageView.contentMode = UIViewContentModeScaleToFill; //UIViewContentModeScaleAspectFill;
+        
+        [view addSubview:imageView];
 	}
 
 	ReadingItemDTO *item = [readingItems objectAtIndex:index];
@@ -54,16 +60,17 @@
 	else
 		imageURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Book1@2x" ofType:@"png"]];
 
+    AsyncImageView *imageView = [[view subviews] objectAtIndex:0];
 	//cancel any previously loading images for this view
-	[[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:view];
-	((AsyncImageView *)view).imageURL = imageURL;
+	[[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:imageView];
+	imageView.imageURL = imageURL;
 
     return view;
 }
 
 
 - (CGSize)swipeViewItemSize:(SwipeView *)swipeView {
-    return CGSizeMake(64, 90);
+    return CGSizeMake(64, 102);
 }
 
 @end
