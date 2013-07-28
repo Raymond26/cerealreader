@@ -7,6 +7,7 @@ create table book (
   id                        bigint not null,
   isbn                      bigint,
   title                     varchar(255),
+  image_url                 varchar(255),
   constraint pk_book primary key (id))
 ;
 
@@ -40,6 +41,7 @@ create table finished_read (
 
 create table rmember (
   id                        bigint not null,
+  username                  varchar(255),
   email_address             varchar(255),
   facebook_token            varchar(255),
   constraint pk_rmember primary key (id))

@@ -27,9 +27,8 @@ public class CurrentRead extends Read {
     }
 
     /* For updating currently reading */
-    public CurrentRead(Book book, DateTime startDate, String currentThoughts) {
+    public CurrentRead(Book book, String currentThoughts) {
         this.book = book;
-        this.startDate = startDate;
         this.currentThoughts = currentThoughts;
     }
 

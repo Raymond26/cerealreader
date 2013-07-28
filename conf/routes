@@ -3,25 +3,27 @@
 # ~~~~
 
 # Home page
-GET         /                                           controllers.Application.index()
+GET         /                                   controllers.Application.index()
 
 # User Controller
-GET         /users/:memberId                            controllers.MemberController.getUserProfile(memberId: Long)
-GET         /users/:memberId/books/finished             controllers.MemberController.getFinishedReading(memberId: Long)
-GET         /users/:memberId/books/current              controllers.MemberController.getCurrentlyReading(memberId: Long)
-GET         /users/:memberId/books/desired              controllers.MemberController.getDesiredReads(memberId: Long)
-GET         /users/:memberId/books/addcurrent           controllers.MemberController.addCurrentBook(memberId: Long)
+GET         /users/:memberId                    controllers.MemberController.getUserProfile(memberId: Long)
+GET         /users/:memberId/finished           controllers.MemberController.getFinishedReading(memberId: Long)
+GET         /users/:memberId/current            controllers.MemberController.getCurrentlyReading(memberId: Long)
+GET         /users/:memberId/desired            controllers.MemberController.getDesiredReads(memberId: Long)
 
 # Reads Controller
-GET         /reads/:id/desiretocurrent                  controllers.MemberController.desiredToCurrentBook(id: Long)
-GET         /reads/:id/comment                          controllers.MemberController.setCurrentThoughts(id: Long)
-GET         /reads/:id/finish                           controllers.MemberController.finishedReading(id: Long)
+GET         /reads/:id/desiretocurrent          controllers.MemberController.desiredToCurrentBook(id: Long)
+GET         /reads/:id/comment                  controllers.MemberController.setCurrentThoughts(id: Long)
+GET         /reads/:id/finish                   controllers.MemberController.finishedReading(id: Long)
+GET         /users/:memberId/addfinished        controllers.ReadsController.addFinishedBook(memberId: Long)
+GET         /users/:memberId/adddesired         controllers.ReadsController.addDesiredBook(memberId: Long)
+GET         /users/:memberId/addcurrent         controllers.ReadsController.addCurrentBook(memberId: Long)
 
 # Books Controller
-GET         /books                                      controllers.BooksController.getBooks()
+GET         /books                              controllers.BooksController.getBooks()
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file                               controllers.Assets.at(path="/public", file)
+GET         /assets/*file                       controllers.Assets.at(path="/public", file)
 
 # Security & Registration
-POST        /api/register                               controllers.SecurityController.registerUser()
+POST        /api/register                       controllers.SecurityController.registerUser()

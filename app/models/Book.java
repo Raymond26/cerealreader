@@ -18,6 +18,21 @@ public class Book extends Model {
 
     public String title;
 
+    public String authors;
+
+    public String description;
+
+    /* Old */
+    public Long isbn_10;
+
+    public Integer pageCount;
+
+    public Integer averageRating;
+
+    public Integer ratingsCount;
+
+    public String thumbnail;
+
     public Book() {}
 
     public Book(Long isbn, String title) {

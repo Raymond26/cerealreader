@@ -30,13 +30,6 @@ public class MemberController extends Controller {
         return ok(Json.toJson(RMember.finderMember.byId(memberId).desiredReading));
     }
 
-    public static Result addCurrentBook(Long memberId) {
-        Long isbn = Long.parseLong(request().getQueryString("isbn"));
-        CurrentRead read = new CurrentRead(Book.getByIsbn(isbn));
-        RMember.finderMember.byId(memberId).addCurrentReading(read);
-        return ok("book successfully added");
-    }
-
     public static Result getCurrentlyReading(Long memberId) {
         return ok(Json.toJson(RMember.finderMember.byId(memberId).currentlyReading));
     }

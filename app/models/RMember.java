@@ -15,6 +15,8 @@ public class RMember extends Model {
     @Id
     public Long id;
 
+    public String username;
+
     @Constraints.Email
     @JsonIgnore
     public String emailAddress;
@@ -24,7 +26,8 @@ public class RMember extends Model {
 
     public RMember() {}
 
-    public RMember(String emailAddress, String facebookToken) {
+    public RMember(String username, String emailAddress, String facebookToken) {
+        this.username = username;
         this.emailAddress = emailAddress;
         this.facebookToken = facebookToken;
     }
@@ -50,8 +53,9 @@ public class RMember extends Model {
         currentRead.save();
     }
 
-    /*public void finishReading(Read read) {
-        read.cu
-    }*/
+    public void addFinishedReading(FinishedRead finishedRead) {
+        finishedRead.rmember = this;
+        finishedRead.save();
+    }
 
 }

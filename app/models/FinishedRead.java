@@ -19,6 +19,17 @@ public class FinishedRead extends Read {
         this.rmember = currentRead.rmember;
     }
 
+    public FinishedRead(Book book) {
+        this.book = book;
+        this.finishDate = DateTime.now();
+    }
+
+    public FinishedRead(Long memberId, Book book) {
+        this.book = book;
+        this.finishDate = DateTime.now();
+        this.rmember = RMember.finderMember.ref(memberId);
+    }
+
     public static Finder<Long,FinishedRead> findFinishedRead = new Finder(
             Long.class, FinishedRead.class
     );
