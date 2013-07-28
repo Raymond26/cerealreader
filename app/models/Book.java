@@ -15,16 +15,17 @@ public class Book extends Model {
     @Id
     public Long id;
 
-    public Long isbn;
+    public String isbn;
 
     public String title;
 
     public String authors;
 
+    @Column(columnDefinition = "TEXT")
     public String description;
 
-    /* Old */
-    public Long isbn_10;
+    /* Historic ISBNs if after 2007 */
+    public String isbn_10;
 
     public Integer pageCount;
 
@@ -40,7 +41,7 @@ public class Book extends Model {
 
     public Book() {}
 
-    public Book(Long isbn, String title) {
+    public Book(String isbn, String title) {
         this.isbn = isbn;
         this.title = title;
     }
@@ -55,8 +56,12 @@ public class Book extends Model {
 
     public static Finder<Long,Book> finderBook = new Finder(Long.class,Book.class);
 
-    public static Book getByIsbn(Long isbn) {
+    public static Book getByIsbn(String isbn) {
         return finderBook.where().eq("isbn", isbn).findUnique();
+    }
+
+    public static Boolean existsIsbn(String isbn) {
+        return (finderBook.where().eq("isbn", isbn).findRowCount() > 0);
     }
 
 }

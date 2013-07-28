@@ -52,4 +52,16 @@ public class MemberController extends Controller {
     public static Result getFinishedReading(Long memberId) {
         return ok(Json.toJson(RMember.finderMember.byId(memberId).finishedReading));
     }
+
+    public static Result getFriendsOf(Long memberId) {
+        return ok(Json.toJson(RMember.finderMember.byId(memberId).myFriends));
+    }
+
+    public static Result addFriend(Long memberId, Long newFriendId) {
+        RMember newFriend = RMember.finderMember.ref(newFriendId);
+        RMember me = RMember.finderMember.byId(memberId);
+        me.myFriends.add(newFriend);
+        me.saveManyToManyAssociations("myFriends");
+        return ok("added friend");
+    }
 }

@@ -5,11 +5,11 @@
 
 create table book (
   id                        bigint not null,
-  isbn                      bigint,
+  isbn                      varchar(255),
   title                     varchar(255),
   authors                   varchar(255),
-  description               varchar(255),
-  isbn_10                   bigint,
+  description               TEXT,
+  isbn_10                   varchar(255),
   page_count                integer,
   average_rating            integer,
   ratings_count             integer,
@@ -64,6 +64,12 @@ create table read (
   constraint pk_read primary key (id))
 ;
 
+
+create table friends (
+  rmember_my                     bigint not null,
+  rmember_of                     bigint not null,
+  constraint pk_friends primary key (rmember_my, rmember_of))
+;
 create sequence book_seq;
 
 create sequence current_read_seq;
@@ -95,6 +101,10 @@ create index ix_read_book_8 on read (book_id);
 
 
 
+alter table friends add constraint fk_friends_rmember_01 foreign key (rmember_my) references rmember (id);
+
+alter table friends add constraint fk_friends_rmember_02 foreign key (rmember_of) references rmember (id);
+
 # --- !Downs
 
 drop table if exists book cascade;
@@ -106,6 +116,8 @@ drop table if exists desired_read cascade;
 drop table if exists finished_read cascade;
 
 drop table if exists rmember cascade;
+
+drop table if exists friends cascade;
 
 drop table if exists read cascade;
 
