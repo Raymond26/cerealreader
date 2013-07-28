@@ -48,7 +48,7 @@ public class RMember extends Model {
 
     @ManyToMany(mappedBy = "friendsOf")
     @JsonIgnore
-    public Set<RMember> myFriends = new HashSet<RMember>();
+    public List<RMember> myFriends = new ArrayList<RMember>();
 
 
     @ManyToMany()
@@ -58,7 +58,7 @@ public class RMember extends Model {
             joinColumns = {@JoinColumn(name="rmember_my", referencedColumnName = "id")},
             inverseJoinColumns={@JoinColumn(name="rmember_of", referencedColumnName = "id")}
     )
-    public Set<RMember> friendsOf = new HashSet<RMember>();
+    public List<RMember> friendsOf = new ArrayList<RMember>();
 
     public static Finder<Long,RMember> finderMember = new Finder(
             Long.class, RMember.class

@@ -2,6 +2,8 @@ package controllers;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
 
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
@@ -140,7 +142,7 @@ public class BooksController extends Controller {
     public static Result getUserFeed(final Long memberId, final Integer page) {
         final List<FinishedRead> finishedReading = RMember.finderMember.byId(memberId).finishedReading;
         final List<Book> recommendations = new ArrayList<Book>();
-        final List<Book> friendsActivity = new ArrayList<Book>();
+        final Set<Book> friendsActivity = new HashSet<Book>();
         final List<Book> topRated = new ArrayList<Book>();
 
         List<Promise<? extends WS.Response>> webServiceCalls = new ArrayList<Promise<? extends WS.Response>>();
@@ -151,6 +153,14 @@ public class BooksController extends Controller {
 
                 Promise<WS.Response> googleResponse = WS.url(google_api).setQueryParameter("q",title).setQueryParameter("key", google_api_key).get();
                 webServiceCalls.add(googleResponse);
+        }
+
+        List<RMember> friends = RMember.finderMember.byId(memberId).myFriends;
+        Set<Book> friendsBooks = new HashSet<Book>();
+        for(RMember friend : friends) {
+            for(FinishedRead finishedRead : friend.finishedReading) {
+                friendsActivity.add(finishedRead.book);
+            }
         }
 
         Promise<List<WS.Response>> results = Promise.sequence(webServiceCalls);
@@ -168,7 +178,6 @@ public class BooksController extends Controller {
                         if(Book.existsIsbn(book.isbn)) {
                             Book found = Book.getByIsbn(book.isbn);
                             recommendations.add(found);
-                            friendsActivity.add(found);
                             topRated.add(found);
                             continue;
                         }
@@ -188,7 +197,6 @@ public class BooksController extends Controller {
 
                         book.save();
                         recommendations.add(book);
-                        friendsActivity.add(book);
                         topRated.add(book);
                     }
                 }
@@ -200,5 +208,16 @@ public class BooksController extends Controller {
                 return ok(result);
             }
         }));
+    }
+
+    public static Result getFriendsBooks(Long memberId) {
+        List<RMember> friends = RMember.finderMember.byId(memberId).myFriends;
+        Set<Book> friendsBooks = new HashSet<Book>();
+        for(RMember friend : friends) {
+            for(FinishedRead finishedRead : friend.finishedReading) {
+                friendsBooks.add(finishedRead.book);
+            }
+        }
+        return ok(Json.toJson(friendsBooks));
     }
 }
