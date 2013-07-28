@@ -12,6 +12,9 @@
 #import "FeedSectionDataSource.h"
 #import "UINavigationController+Extras.h"
 #import "FeedSectionFocusViewController.h"
+#import "HardFeedDTO.h"
+#import "CallbackHandler.h"
+#import "AppDelegate.h"
 
 
 @implementation FeedViewController {
@@ -23,6 +26,7 @@
 
 	_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
+	/*
 	_feedDTO = [[FeedDTO alloc] init];
 	NSMutableArray *newFeedSections = [NSMutableArray new];
 	_feedDTO.sections = newFeedSections;
@@ -77,9 +81,40 @@
 	book.author = @"Moooo";
 	book.thumbnail = @"http://bks3.books.google.com/books?id=1lK3xA72adAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api";
 
-	[newFeedItems addObject:book];
+	[newFeedItems addObject:book];*/
+
+	[[CallbackHandler instance] doRequestWithPath:@"/users/1/feed/1" params:nil expectedDTO:[HardFeedDTO class] delegate:self successSelector:@selector(dataLoaded:) failureSelector:nil];
 
 	[self addReaderNavigationItems];
+
+	((AppDelegate*)[[UIApplication sharedApplication] delegate]).currentViewController = self;
+}
+
+- (void)dataLoaded:(HardFeedDTO*)hardFeedDTO {
+	_feedDTO = [[FeedDTO alloc] init];
+	NSMutableArray *newFeedSections = [NSMutableArray new];
+	_feedDTO.sections = newFeedSections;
+
+	FeedSectionDTO *recommendations = [FeedSectionDTO new];
+	recommendations.title = @"Recommendations";
+	recommendations.items = hardFeedDTO.recommendations;
+
+	[newFeedSections addObject:recommendations];
+
+	FeedSectionDTO *friendsActivity = [FeedSectionDTO new];
+	friendsActivity.title = @"Friend Activity";
+	friendsActivity.items = hardFeedDTO.friendsActivity;
+
+	[newFeedSections addObject:friendsActivity];
+
+
+	FeedSectionDTO *topRated = [FeedSectionDTO new];
+	topRated.title = @"Top Rated";
+	topRated.items = hardFeedDTO.topRated;
+
+	[newFeedSections addObject:topRated];
+
+	[_tableView reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -126,15 +161,20 @@
 {
 	FeedSectionDTO *section = [_feedDTO.sections objectAtIndex:(NSUInteger)index];
 
-	UIButton *header = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 40.0)];
+	UIButton *header = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 26.0)];
 	header.tag = index;
-	header.backgroundColor = [UIColor grayColor];
+	header.backgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
 
-	UILabel *textLabel = [[UILabel alloc] initWithFrame:header.frame];
+	CGRect textFrame = CGRectMake(0, 0, tableView.frame.size.width, 26);
+	UILabel *textLabel = [[UILabel alloc] initWithFrame:textFrame];
 	textLabel.text = section.title;
-	textLabel.backgroundColor = [UIColor grayColor];
-	textLabel.textColor = [UIColor whiteColor];
+	textLabel.textColor = [UIColor blackColor];
+	textLabel.backgroundColor = [UIColor clearColor];
 	textLabel.textAlignment = NSTextAlignmentCenter;
+
+
+	UIFont *font = [UIFont fontWithName:@"Gotham-Medium" size:16];
+	textLabel.font = font;
 
 	[header addSubview:textLabel];
 
@@ -160,7 +200,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-	return 40.0;
+	return 26.0;
 }
 
 
