@@ -10,7 +10,7 @@
 		7F1DE05946AB204D40EF7B77 /* BookDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DE1BE442B63453E4F5568 /* BookDTO.m */; };
 		7F1DE09FDE645F7AA8E86DAE /* FeedDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DEA974EB49D1785F47734 /* FeedDTO.m */; };
 		7F1DE128E159B696F6249873 /* BasicUserDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DEFE1B88F88E186AA8C01 /* BasicUserDTO.m */; };
-		7F1DE3F87271980E44A5B314 /* UINavigationController+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DE2FED5D5DAB70C71204C /* UINavigationController+Extras.m */; };
+		7F1DE3F87271980E44A5B314 /* UIViewController+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DE2FED5D5DAB70C71204C /* UIViewController+Extras.m */; };
 		7F1DE4C089C6724BEC2B6FD2 /* HardFeedDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DEB09C22735473551C21E /* HardFeedDTO.m */; };
 		7F1DE4D51C44EC03E3EE5956 /* UserReadDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DEC6C4AA22698AEF2C60E /* UserReadDTO.m */; };
 		7F1DE5C569EAC6B668868D01 /* FeedSectionDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1DE32DA0E47BE541CB1DB5 /* FeedSectionDataSource.m */; };
@@ -81,6 +81,9 @@
 		E0C817DB17A5D3A20065DA39 /* Login2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C817DA17A5D3A20065DA39 /* Login2@2x.png */; };
 		E0C817DD17A5D4B50065DA39 /* Icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C817DC17A5D4B50065DA39 /* Icon2.png */; };
 		E0C817DF17A5D4CD0065DA39 /* Icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C817DE17A5D4CD0065DA39 /* Icon2.png */; };
+		E0C817E417A5E06C0065DA39 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0C817E217A5E06C0065DA39 /* FriendsViewController.m */; };
+		E0C817E517A5E06C0065DA39 /* FriendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0C817E317A5E06C0065DA39 /* FriendsViewController.xib */; };
+		E0C817E717A5E1170065DA39 /* Friend-Activity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E0C817E617A5E1170065DA39 /* Friend-Activity@2x.png */; };
 		E0CB6B5317A4979600E2E3FD /* CompletedReadingDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB6B5217A4979600E2E3FD /* CompletedReadingDataSource.m */; };
 		E0F277FB17A4A5A700E36825 /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F277FA17A4A5A700E36825 /* SwipeView.m */; };
 		E0F277FE17A4AE6F00E36825 /* UserProfileDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F277FD17A4AE6F00E36825 /* UserProfileDTO.m */; };
@@ -117,7 +120,7 @@
 		7F1DE2472957ECABA361E7A8 /* FeedItemControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedItemControl.h; sourceTree = "<group>"; };
 		7F1DE24F4949F8A3B2AC1F6D /* FeedItemControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedItemControl.m; sourceTree = "<group>"; };
 		7F1DE2BF6083E64583E47840 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
-		7F1DE2FED5D5DAB70C71204C /* UINavigationController+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Extras.m"; sourceTree = "<group>"; };
+		7F1DE2FED5D5DAB70C71204C /* UIViewController+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extras.m"; sourceTree = "<group>"; };
 		7F1DE3266D46EE5B79F49105 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 		7F1DE32DA0E47BE541CB1DB5 /* FeedSectionDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedSectionDataSource.m; sourceTree = "<group>"; };
 		7F1DE395E81E190ED85CB986 /* ReadingItemDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingItemDTO.m; sourceTree = "<group>"; };
@@ -130,7 +133,7 @@
 		7F1DE7079F5915755F10257A /* UIImage+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extras.m"; sourceTree = "<group>"; };
 		7F1DE762A71868398322FA41 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		7F1DE791F4AE27BCA9D88B7B /* ReadingItemDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingItemDTO.h; sourceTree = "<group>"; };
-		7F1DE7C996264EC906AC2896 /* UINavigationController+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Extras.h"; sourceTree = "<group>"; };
+		7F1DE7C996264EC906AC2896 /* UIViewController+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extras.h"; sourceTree = "<group>"; };
 		7F1DE9A731D69D9B067C589C /* FeedSectionDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedSectionDTO.m; sourceTree = "<group>"; };
 		7F1DEA974EB49D1785F47734 /* FeedDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedDTO.m; sourceTree = "<group>"; };
 		7F1DEB09C22735473551C21E /* HardFeedDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HardFeedDTO.m; sourceTree = "<group>"; };
@@ -228,6 +231,10 @@
 		E0C817DA17A5D3A20065DA39 /* Login2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Login2@2x.png"; sourceTree = "<group>"; };
 		E0C817DC17A5D4B50065DA39 /* Icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon2.png; sourceTree = "<group>"; };
 		E0C817DE17A5D4CD0065DA39 /* Icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon2.png; sourceTree = "<group>"; };
+		E0C817E117A5E06C0065DA39 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendsViewController.h; path = Friends/FriendsViewController.h; sourceTree = "<group>"; };
+		E0C817E217A5E06C0065DA39 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendsViewController.m; path = Friends/FriendsViewController.m; sourceTree = "<group>"; };
+		E0C817E317A5E06C0065DA39 /* FriendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FriendsViewController.xib; path = Friends/FriendsViewController.xib; sourceTree = "<group>"; };
+		E0C817E617A5E1170065DA39 /* Friend-Activity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Friend-Activity@2x.png"; sourceTree = "<group>"; };
 		E0CB6B5117A4979600E2E3FD /* CompletedReadingDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedReadingDataSource.h; sourceTree = "<group>"; };
 		E0CB6B5217A4979600E2E3FD /* CompletedReadingDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedReadingDataSource.m; sourceTree = "<group>"; };
 		E0F277F917A4A5A700E36825 /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
@@ -288,8 +295,8 @@
 			children = (
 				7F1DE7079F5915755F10257A /* UIImage+Extras.m */,
 				7F1DEE56B1CAFAF3513CC9BD /* UIImage+Extras.h */,
-				7F1DE2FED5D5DAB70C71204C /* UINavigationController+Extras.m */,
-				7F1DE7C996264EC906AC2896 /* UINavigationController+Extras.h */,
+				7F1DE2FED5D5DAB70C71204C /* UIViewController+Extras.m */,
+				7F1DE7C996264EC906AC2896 /* UIViewController+Extras.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -561,6 +568,7 @@
 		E06994A217A46E820063D992 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E0C817E617A5E1170065DA39 /* Friend-Activity@2x.png */,
 				E0C817DA17A5D3A20065DA39 /* Login2@2x.png */,
 				E0F277FF17A4DDA800E36825 /* BG@2x.png */,
 				E0F2780017A4DDA800E36825 /* menu_bar@2x.png */,
@@ -618,6 +626,7 @@
 		E06994DC17A470AB0063D992 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E0C817E017A5E0480065DA39 /* Friends */,
 				E0C817D417A5B49E0065DA39 /* BookDetailView */,
 				E06994DD17A470AC0063D992 /* Profile */,
 				E06994E017A470AC0063D992 /* Recommendations */,
@@ -652,6 +661,16 @@
 				E0C817D717A5B4BB0065DA39 /* BookDetailViewController.xib */,
 			);
 			name = BookDetailView;
+			sourceTree = "<group>";
+		};
+		E0C817E017A5E0480065DA39 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				E0C817E117A5E06C0065DA39 /* FriendsViewController.h */,
+				E0C817E217A5E06C0065DA39 /* FriendsViewController.m */,
+				E0C817E317A5E06C0065DA39 /* FriendsViewController.xib */,
+			);
+			name = Friends;
 			sourceTree = "<group>";
 		};
 		E0CB6B5017A4978100E2E3FD /* CompletedReading */ = {
@@ -791,6 +810,8 @@
 				E0C817DB17A5D3A20065DA39 /* Login2@2x.png in Resources */,
 				E0C817DD17A5D4B50065DA39 /* Icon2.png in Resources */,
 				E0C817DF17A5D4CD0065DA39 /* Icon2.png in Resources */,
+				E0C817E517A5E06C0065DA39 /* FriendsViewController.xib in Resources */,
+				E0C817E717A5E1170065DA39 /* Friend-Activity@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -845,9 +866,10 @@
 				7F1DE5C569EAC6B668868D01 /* FeedSectionDataSource.m in Sources */,
 				7F1DEE71DA7AACDE0E42F441 /* FeedItemControl.m in Sources */,
 				E0F8059E17A598AB0075A9FE /* FeedSectionFocusViewController.m in Sources */,
-				7F1DE3F87271980E44A5B314 /* UINavigationController+Extras.m in Sources */,
+				7F1DE3F87271980E44A5B314 /* UIViewController+Extras.m in Sources */,
 				E0C817D817A5B4BB0065DA39 /* BookDetailViewController.m in Sources */,
 				7F1DE4C089C6724BEC2B6FD2 /* HardFeedDTO.m in Sources */,
+				E0C817E417A5E06C0065DA39 /* FriendsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

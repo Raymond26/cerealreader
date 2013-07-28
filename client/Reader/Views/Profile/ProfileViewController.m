@@ -10,7 +10,7 @@
 #import "CurrentlyReadingDataSource.h"
 #import "CallbackHandler.h"
 #import "UserProfileDTO.h"
-#import "UINavigationController+Extras.h"
+#import "UIViewController+Extras.h"
 
 @interface ProfileViewController ()
 
