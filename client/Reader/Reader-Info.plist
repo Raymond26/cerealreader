@@ -39,7 +39,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>APP_CALLBACK_URL</key>
-	<string>http://192.168.1.46</string>
+	<string>http://192.168.1.46:9000</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Gotham-LightItalic.otf</string>
