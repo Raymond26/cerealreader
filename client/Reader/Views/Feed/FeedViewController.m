@@ -8,20 +8,30 @@
 #import "BookDTO.h"
 #import "AsyncImageView.h"
 #import "FeedItemControl.h"
+#import "FeedDTO.h"
+#import "FeedSectionDataSource.h"
+#import "UINavigationController+Extras.h"
 
 
 @implementation FeedViewController {
-    NSArray *_feedItems;
-    
-    UINib *viewNib;
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
-    mainSwipeView.vertical = YES;
-    
-    NSMutableArray *newFeedItems = [NSMutableArray new];
+
+	_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+	_feedDTO = [[FeedDTO alloc] init];
+	NSMutableArray *newFeedSections = [NSMutableArray new];
+	_feedDTO.sections = newFeedSections;
+
+	FeedSectionDTO *feedSection = [FeedSectionDTO new];
+	[newFeedSections addObject:feedSection];
+
+	NSMutableArray *newFeedItems = [NSMutableArray new];
+	feedSection.title = @"Recommendations";
+	feedSection.items = newFeedItems;
     
     BookDTO *book = [BookDTO new];
     
@@ -29,6 +39,7 @@
     book.author = @"Batman";
     book.thumbnail = @"http://bks3.books.google.com/books?id=1lK3xA72adAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api";
     
+    book = [BookDTO new];
     [newFeedItems addObject:book];
     
     book.title = @"New book";
@@ -38,50 +49,100 @@
     [newFeedItems addObject:book];
     
     
-    _feedItems = newFeedItems;
+    feedSection = [FeedSectionDTO new];
+	[newFeedSections addObject:feedSection];
     
-    viewNib = [UINib nibWithNibName:@"FeedItemControl" bundle:[NSBundle mainBundle]];
+	newFeedItems = [NSMutableArray new];
+	feedSection.title = @"Friend stuff";
+	feedSection.items = newFeedItems;
     
-    [mainSwipeView reloadData];
+    book = [BookDTO new];
+    
+    book.title = @"Test book";
+    book.author = @"Batman";
+    book.thumbnail = @"http://bks3.books.google.com/books?id=1lK3xA72adAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api";
+    
+    [newFeedItems addObject:book];
+    
+    book = [BookDTO new];    
+    book.title = @"New book";
+    book.author = @"Robin";
+    book.thumbnail = @"http://bks3.books.google.com/books?id=1lK3xA72adAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api";
+    
+    [newFeedItems addObject:book];
+
+	[self addReaderNavigationItems];
 }
 
-- (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView {
-    return [_feedItems count];
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+	return [[_feedDTO sections] count];
 }
 
-- (UIView *)swipeView:(SwipeView *)swipeView viewForItemAtIndex:(NSInteger)index reusingView:(FeedItemControl *)view {
-    if ( !view ) {
-        view = [FeedItemControl itemFromNib:viewNib];
-    }
-    
-    //    view.titleLabel.text = @"moo";
-    
-	//http://bks3.books.google.com/books?id=1lK3xA72adAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
-    
-    BookDTO *book = [_feedItems objectAtIndex:index];
-    
-	//set image URL. AsyncImageView class will then dynamically load the image
-	NSURL *imageURL;
-    
-	if ( book.thumbnail )
-		imageURL = [NSURL URLWithString:book.thumbnail relativeToURL:nil];
-	else
-		imageURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Book1@2x" ofType:@"png"]];
-    
-	//cancel any previously loading images for this view
-	[[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:view.imageView];
-    view.imageView.imageURL = imageURL;
-    
-    view.titleLabel.text = book.title;
-    view.authorLabel.text = book.author;
-    view.ratingControl.rating = 4;
-    
-    return view;
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)index {
+	FeedSectionDTO *section = [_feedDTO.sections objectAtIndex:(NSUInteger)index];
+
+	return section.title;
 }
 
 
-- (CGSize)swipeViewItemSize:(SwipeView *)swipeView {
-    return CGSizeMake(158, 190);
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	return 1;
+
 }
+
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	UITableViewCell *view = [tableView dequeueReusableCellWithIdentifier:@"feedSection"];
+
+	if ( !view ) {
+		view = [[UITableViewCell alloc] initWithFrame:CGRectMake(0, 0, 320, 140)];
+
+		SwipeView *swipeView = [[SwipeView alloc] initWithFrame:CGRectMake(0, 0, 320, 140)];
+		[view addSubview:swipeView];
+	}
+
+	int index = [indexPath indexAtPosition:0];
+	FeedSectionDTO *feedSection = [[_feedDTO sections] objectAtIndex:(NSUInteger)index];
+	FeedSectionDataSource *dataSource = feedSection.dataSource;
+
+	SwipeView *swipeView = [[view subviews] objectAtIndex:1];
+	swipeView.dataSource = dataSource;
+	swipeView.delegate = dataSource;
+
+	return view;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)index
+{
+	FeedSectionDTO *section = [_feedDTO.sections objectAtIndex:(NSUInteger)index];
+
+	UIButton *header = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 40.0)];
+	header.backgroundColor = [UIColor grayColor];
+
+	UILabel *textLabel = [[UILabel alloc] initWithFrame:header.frame];
+	textLabel.text = section.title;
+	textLabel.backgroundColor = [UIColor grayColor];
+	textLabel.textColor = [UIColor whiteColor];
+	textLabel.textAlignment = NSTextAlignmentCenter;
+
+	[header addSubview:textLabel];
+
+	[header addTarget:self action:@selector(sectionSelected:) forControlEvents:UIControlEventTouchUpInside];
+
+	return header;
+}
+
+- (void)sectionSelected:(UIView*)header {
+	[self performSegueWithIdentifier:@"ViewFeedSectionFocus" sender:self];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+return 40.0;
+}
+
+
 
 @end

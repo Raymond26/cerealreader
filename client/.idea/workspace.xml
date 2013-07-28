@@ -2,39 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e510263d-7723-4af1-b296-4842ea04468c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reader/Views/Feed/FeedItemControl.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reader/Views/Feed/FeedItemControl.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reader/Views/Feed/FeedItemControl.xib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reader/DTO/FeedSectionDTO.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reader/DTO/FeedSectionDTO.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reader/Views/Feed/FeedViewController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reader/Views/Feed/FeedViewController.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reader/Controls/RatingControl.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reader/Controls/RatingControl.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader/DTO/BookDTO.h" afterPath="$PROJECT_DIR$/Reader/DTO/BookDTO.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader/Views/Profile/CurrentlyReadingDataSource.m" afterPath="$PROJECT_DIR$/Reader/Views/Profile/CurrentlyReadingDataSource.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reader/Views/Feed/Items/FeedItemSmallControl.xib" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reader/Views/Feed/FeedSectionFocusView/FeedSectionFocusViewController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Reader/Views/Feed/FeedSectionFocusView/FeedSectionFocusViewController.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Reader/Views/Feed/FeedItemControl.h" afterPath="$PROJECT_DIR$/Reader/Views/Feed/Items/FeedItemControl.h" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Reader/Views/Feed/FeedItemControl.m" afterPath="$PROJECT_DIR$/Reader/Views/Feed/Items/FeedItemControl.m" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Reader/Views/Feed/FeedItemControl.xib" afterPath="$PROJECT_DIR$/Reader/Views/Feed/Items/FeedItemControl.xib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader/Assets/menu_button@2x.png" afterPath="$PROJECT_DIR$/Reader/Assets/menu_button@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader/Assets/search_button@2x.png" afterPath="$PROJECT_DIR$/Reader/Assets/search_button@2x.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader/DTO/FeedSectionDTO.h" afterPath="$PROJECT_DIR$/Reader/DTO/FeedSectionDTO.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader/DTO/FeedSectionDTO.m" afterPath="$PROJECT_DIR$/Reader/DTO/FeedSectionDTO.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader/Views/Feed/FeedViewController.h" afterPath="$PROJECT_DIR$/Reader/Views/Feed/FeedViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader/Views/Feed/FeedViewController.m" afterPath="$PROJECT_DIR$/Reader/Views/Feed/FeedViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader/MainNavigationController.m" afterPath="$PROJECT_DIR$/Reader/MainNavigationController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader/en.lproj/MainStoryboard_iPhone.storyboard" afterPath="$PROJECT_DIR$/Reader/en.lproj/MainStoryboard_iPhone.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader/Views/Profile/ProfileCurrentlyReadingView.h" afterPath="$PROJECT_DIR$/Reader/Views/Profile/ProfileCurrentlyReadingView.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader/Views/Profile/ProfileCurrentlyReadingView.xib" afterPath="$PROJECT_DIR$/Reader/Views/Profile/ProfileCurrentlyReadingView.xib" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader/Views/Profile/ProfileViewController.m" afterPath="$PROJECT_DIR$/Reader/Views/Profile/ProfileViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader/Reader-Info.plist" afterPath="$PROJECT_DIR$/Reader/Reader-Info.plist" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader.xcodeproj/project.xcworkspace/xcuserdata/Giblet.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/Reader.xcodeproj/project.xcworkspace/xcuserdata/Giblet.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Reader.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/Reader.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Reader.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374994646065" ignored="false" />
+    <file path="/Dummy.txt" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375037636011" ignored="false" />
     <file path="/BasicUserDTO.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374980019479" ignored="false" />
     <file path="/CurrentReadingDTO.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374981354551" ignored="false" />
     <file path="/UserReadDTO.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374976046592" ignored="false" />
     <file path="/ReadingItemDTO.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374977483923" ignored="false" />
     <file path="/BookDTO.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375027850944" ignored="false" />
-    <file path="/ProfileViewController.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375027687424" ignored="false" />
+    <file path="/ProfileViewController.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375035176728" ignored="false" />
     <file path="/CallbackHandler.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374978850869" ignored="false" />
-    <file path="/a.dummy" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374982285550" ignored="false" />
+    <file path="/a.dummy" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375032385075" ignored="false" />
     <file path="/UserProfileDTO.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374977621210" ignored="false" />
-    <file path="/fragment.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374985120084" ignored="false" />
+    <file path="/fragment.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375035073719" ignored="false" />
     <file path="/Reader-Info.plist" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374978904324" ignored="false" />
     <file path="/Jastor.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374979911958" ignored="false" />
     <file path="/CurrentlyReadingDataSource.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375027994617" ignored="false" />
@@ -42,11 +41,23 @@
     <file path="/CompletedReadingDataSource.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374981447437" ignored="false" />
     <file path="/CompletedReadingDataSource.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374982373221" ignored="false" />
     <file path="/ProfileViewController.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374985314647" ignored="false" />
-    <file path="/MainNavigationController.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1374987563015" ignored="false" />
+    <file path="/MainNavigationController.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375034752641" ignored="false" />
     <file path="/RatingControl.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375028002521" ignored="false" />
     <file path="/RatingControl.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375028138637" ignored="false" />
-    <file path="/FeedSectionDTO.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375028765061" ignored="false" />
-    <file path="/FeedSectionDTO.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375028790892" ignored="false" />
+    <file path="/FeedSectionDTO.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375030489139" ignored="false" />
+    <file path="/FeedSectionDTO.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375030543657" ignored="false" />
+    <file path="/FeedViewController.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375037732425" ignored="false" />
+    <file path="/FeedDTO.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375031603144" ignored="false" />
+    <file path="/FeedDTO.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375029000794" ignored="false" />
+    <file path="/FeedViewController.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375029423347" ignored="false" />
+    <file path="/FeedSectionView.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375030176449" ignored="false" />
+    <file path="/FeedSectionView.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375030054150" ignored="false" />
+    <file path="/FeedItemControl.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375036599046" ignored="false" />
+    <file path="/FeedItemControl.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375036582529" ignored="false" />
+    <file path="/FeedSectionDataSource.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375036562350" ignored="false" />
+    <file path="/FeedSectionFocusViewController.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375036441441" ignored="false" />
+    <file path="/UINavigationController+Extras.m" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375037698403" ignored="false" />
+    <file path="/UINavigationController+Extras.h" changelist="e510263d-7723-4af1-b296-4842ea04468c" time="1375037749925" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,31 +77,98 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FeedSectionDTO.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reader/DTO/FeedSectionDTO.h">
+      <file leaf-file-name="FeedSectionDataSource.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/Section/FeedSectionDataSource.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
+            <state line="46" column="16" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FeedSectionDTO.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reader/DTO/FeedSectionDTO.m">
+      <file leaf-file-name="FeedViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/FeedViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="27" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+            <state line="11" column="11" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#47#73#0" expanded="true" />
+                <element signature="e#47#80#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FeedViewController.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FeedSectionFocusViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/FeedSectionFocusView/FeedSectionFocusViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="36" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#150#192#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FeedSectionFocusViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/FeedSectionFocusView/FeedSectionFocusViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reader/Views/Profile/ProfileViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="52" selection-start="2735" selection-end="2735" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainNavigationController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reader/MainNavigationController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="12" selection-start="1197" selection-end="1197" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FeedItemControl.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/Items/FeedItemControl.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="39" selection-start="1456" selection-end="1456" vertical-scroll-proportion="0.7518248">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UINavigationController+Extras.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reader/Util/UINavigationController+Extras.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="27" selection-start="93" selection-end="109" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UINavigationController+Extras.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Reader/Util/UINavigationController+Extras.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="32" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FeedViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/FeedViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="244" selection-end="244" vertical-scroll-proportion="-0.9593023">
-              <folding />
+            <state line="72" column="0" selection-start="2050" selection-end="2050" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#47#77#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,22 +192,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Reader/Views/Profile/CompletedReadingDataSource.h" />
-        <option value="$PROJECT_DIR$/Reader/DTO/UserProfileDTO.m" />
-        <option value="$PROJECT_DIR$/Reader/Views/Profile/CompletedReadingDataSource.m" />
-        <option value="$PROJECT_DIR$/Reader/Views/Profile/ProfileViewController.h" />
-        <option value="$PROJECT_DIR$/Reader/Util/UIImage+Extras.m" />
-        <option value="$PROJECT_DIR$/Reader/Util/UIImage+Extras.h" />
-        <option value="$PROJECT_DIR$/Reader/MainNavigationController.m" />
-        <option value="$PROJECT_DIR$/Reader/Views/Feed/FeedViewController.h" />
-        <option value="$PROJECT_DIR$/Reader/DTO/BookDTO.h" />
-        <option value="$PROJECT_DIR$/Reader/Controls/RatingControl.h" />
-        <option value="$PROJECT_DIR$/Reader/Controls/RatingControl.m" />
-        <option value="$PROJECT_DIR$/Reader/Views/Profile/CurrentlyReadingDataSource.m" />
-        <option value="$PROJECT_DIR$/Reader/Views/Profile/ProfileViewController.m" />
-        <option value="$PROJECT_DIR$/Reader/Reader-Info.plist" />
+        <option value="$PROJECT_DIR$/Reader/Views/Feed/Section/FeedSectionView.h" />
+        <option value="$PROJECT_DIR$/Reader/Views/Feed/Section/FeedSectionView.m" />
         <option value="$PROJECT_DIR$/Reader/DTO/FeedSectionDTO.h" />
         <option value="$PROJECT_DIR$/Reader/DTO/FeedSectionDTO.m" />
+        <option value="$PROJECT_DIR$/Reader/Views/Feed/Section/FeedSectionDataSource.h" />
+        <option value="$PROJECT_DIR$/Reader/Views/Feed/FeedViewController.h" />
+        <option value="$PROJECT_DIR$/Reader/DTO/FeedDTO.h" />
+        <option value="$PROJECT_DIR$/Reader/MainNavigationController.m" />
+        <option value="$PROJECT_DIR$/Reader/Views/Feed/Section/FeedSectionDataSource.m" />
+        <option value="$PROJECT_DIR$/Reader/Views/Feed/Items/FeedItemControl.m" />
+        <option value="$PROJECT_DIR$/Reader/Views/Feed/Items/FeedItemControl.h" />
+        <option value="$PROJECT_DIR$/Reader/Util/UINavigationController+Extras.h" />
+        <option value="$PROJECT_DIR$/Reader/Util/UINavigationController+Extras.m" />
+        <option value="$PROJECT_DIR$/Reader/Views/Feed/FeedViewController.m" />
+        <option value="$PROJECT_DIR$/Reader/Views/Feed/FeedSectionFocusView/FeedSectionFocusViewController.m" />
+        <option value="$PROJECT_DIR$/Reader/Views/Profile/ProfileViewController.m" />
       </list>
     </option>
   </component>
@@ -300,6 +378,84 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Feed" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Section" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reader" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reader" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Feed" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Items" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reader" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reader" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Feed" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FeedSectionFocusView" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reader" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reader" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Util" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
@@ -319,42 +475,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Supporting Files" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reader" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reader" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DTO" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reader" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Reader" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -426,26 +546,31 @@
       <created>1374975946943</created>
       <updated>1374975946943</updated>
     </task>
+    <task id="LOCAL-00001" summary="Updating profile view. Adding feed section.">
+      <created>1375028881133</created>
+      <updated>1375028881133</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.49964714" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5066313" sideWeight="0.49964714" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22679046" sideWeight="0.49964714" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26392573" sideWeight="0.49964714" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25335217" sideWeight="0.49336872" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42705572" sideWeight="0.4509527" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25335217" sideWeight="0.76392573" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23607427" sideWeight="0.7755822" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5066313" sideWeight="0.50035286" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23607427" sideWeight="0.22441779" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.49964714" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36870027" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -493,7 +618,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating profile view. Adding feed section." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -507,6 +632,7 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="Updating profile view. Adding feed section." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -517,122 +643,126 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="24" />
+      <option name="time" value="37" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Reader/DTO/BookDTO.m">
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="16" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
+        <state line="78" column="17" selection-start="1752" selection-end="1752" vertical-scroll-proportion="0.2843866">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reader/DTO/BookDTO.h">
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINavigationBar.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="42" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+        <state line="108" column="10" selection-start="5003" selection-end="5003" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reader/Controls/RatingControl.m">
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/usr/include/math.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="34" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0">
+        <state line="476" column="14" selection-start="18954" selection-end="18954" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/FeedViewController.h">
+    <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/Section/FeedSectionDataSource.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0">
+        <state line="13" column="11" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#47#80#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reader/Transport/CallbackHandler.m">
+    <entry file="file://$PROJECT_DIR$/Reader/main.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="34" selection-start="332" selection-end="332" vertical-scroll-proportion="0.37815127">
+        <state line="3" column="40" selection-start="27" selection-end="27" vertical-scroll-proportion="0.1097561">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reader/Reader-Info.plist">
+    <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/Items/FeedItemControl.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="36" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.32515338">
+        <state line="10" column="19" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reader/en.lproj/InfoPlist.strings">
+    <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/Section/FeedSectionDataSource.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="46" column="16" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reader/Views/Profile/CurrentlyReadingDataSource.m">
+    <entry file="file://$PROJECT_DIR$/Reader/Util/UINavigationController+Extras.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="39" selection-start="2181" selection-end="2181" vertical-scroll-proportion="0.88957053">
+        <state line="9" column="32" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reader/Views/Profile/ProfileViewController.m">
+    <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/FeedViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="4" selection-start="744" selection-end="744" vertical-scroll-proportion="0.24369748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reader/Controls/RatingControl.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="82" selection-end="82" vertical-scroll-proportion="0.24539877">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reader/Views/Profile/CurrentlyReadingDataSource.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reader/Views/Profile/ProfileCurrentlyReadingView.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.4417178">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reader/Views/Profile/ProfileViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="4" selection-start="431" selection-end="431" vertical-scroll-proportion="0.398773">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reader/DTO/FeedSectionDTO.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="27" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
+        <state line="11" column="11" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#47#73#0" expanded="true" />
+            <element signature="e#47#80#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Reader/DTO/FeedSectionDTO.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/FeedViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="244" selection-end="244" vertical-scroll-proportion="-0.9593023">
+        <state line="72" column="0" selection-start="2050" selection-end="2050" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#47#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/FeedSectionFocusView/FeedSectionFocusViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="36" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#150#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reader/Views/Profile/ProfileViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="52" selection-start="2735" selection-end="2735" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/FeedSectionFocusView/FeedSectionFocusViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reader/MainNavigationController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="12" selection-start="1197" selection-end="1197" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reader/Util/UINavigationController+Extras.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="27" selection-start="93" selection-end="109" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reader/Views/Feed/Items/FeedItemControl.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="39" selection-start="1456" selection-end="1456" vertical-scroll-proportion="0.7518248">
           <folding />
         </state>
       </provider>

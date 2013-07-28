@@ -7,6 +7,8 @@
 //
 
 #import "FeedItemControl.h"
+#import "BookDTO.h"
+#import "AsyncImageView.h"
 
 @implementation FeedItemControl
 
@@ -31,6 +33,27 @@
     [NSException raise:NSObjectNotAvailableException format:@"Could not create item from nib"];
     
     return NULL;
+}
+
+- (void)setBook:(BookDTO*)book {
+	self.titleLabel.text = book.title;
+	self.authorLabel.text = book.author;
+
+	self.ratingControl.rating = [book.averageRating floatValue];
+	self.ratingControl.ratingsCount = [book.ratingsCount intValue];
+
+
+	//set image URL. AsyncImageView class will then dynamically load the image
+	NSURL *imageURL;
+
+	if ( book.thumbnail )
+		imageURL = [NSURL URLWithString:book.thumbnail relativeToURL:nil];
+	else
+		imageURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Book1@2x" ofType:@"png"]];
+
+	//cancel any previously loading images for this view
+	[[AsyncImageLoader sharedLoader] cancelLoadingImagesForTarget:self.imageView];
+	self.imageView.imageURL = imageURL;
 }
 
 /*

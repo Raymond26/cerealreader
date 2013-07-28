@@ -162,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="62" y="20"/>
+            <point key="canvasLocation" x="-10" y="10"/>
         </scene>
         <!--Feed View Controller - Feed-->
         <scene sceneID="fb6-El-tZy">
@@ -172,20 +172,20 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJ5-1L-eMF" customClass="SwipeView">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="140" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8tn-Df-MgM">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="Doe-WS-Tx9" id="ock-Bf-YvE"/>
-                                    <outlet property="delegate" destination="Doe-WS-Tx9" id="MJ7-b2-iHO"/>
+                                    <outlet property="dataSource" destination="Doe-WS-Tx9" id="gmg-t5-lMd"/>
+                                    <outlet property="delegate" destination="Doe-WS-Tx9" id="11k-AK-1Kl"/>
                                 </connections>
-                            </view>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LJ5-1L-eMF" firstAttribute="top" secondItem="jk4-sV-U6S" secondAttribute="top" type="default" id="8pQ-gB-MAr"/>
-                            <constraint firstItem="LJ5-1L-eMF" firstAttribute="trailing" secondItem="jk4-sV-U6S" secondAttribute="trailing" type="default" id="oyI-oh-bWb"/>
-                            <constraint firstItem="LJ5-1L-eMF" firstAttribute="bottom" secondItem="jk4-sV-U6S" secondAttribute="bottom" type="default" id="pGY-V2-eIa"/>
-                            <constraint firstItem="LJ5-1L-eMF" firstAttribute="leading" secondItem="jk4-sV-U6S" secondAttribute="leading" type="default" id="pJ1-UK-ZXm"/>
+                            <constraint firstItem="8tn-Df-MgM" firstAttribute="bottom" secondItem="jk4-sV-U6S" secondAttribute="bottom" type="default" id="2t4-Mn-2up"/>
+                            <constraint firstItem="8tn-Df-MgM" firstAttribute="trailing" secondItem="jk4-sV-U6S" secondAttribute="trailing" type="default" id="8in-4n-aUm"/>
+                            <constraint firstItem="8tn-Df-MgM" firstAttribute="leading" secondItem="jk4-sV-U6S" secondAttribute="leading" type="default" id="mzc-It-JHE"/>
+                            <constraint firstItem="8tn-Df-MgM" firstAttribute="top" secondItem="jk4-sV-U6S" secondAttribute="top" type="default" id="soi-8Y-gNC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Feed" id="bDw-BX-7it">
@@ -198,12 +198,51 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="mainSwipeView" destination="LJ5-1L-eMF" id="fAB-iP-9OM"/>
+                        <outlet property="tableView" destination="8tn-Df-MgM" id="2YN-9j-Br1"/>
+                        <segue destination="BbZ-gS-JoH" kind="push" identifier="ViewFeedSectionFocus" id="NAb-Y3-ZP7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyb-g7-pTw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-340" y="620"/>
+        </scene>
+        <!--Feed Section Focus View Controller - Section-->
+        <scene sceneID="icX-DX-Te6">
+            <objects>
+                <viewController id="BbZ-gS-JoH" customClass="FeedSectionFocusViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mtG-Qm-PbJ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MiF-C8-1eO">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MiF-C8-1eO" firstAttribute="trailing" secondItem="mtG-Qm-PbJ" secondAttribute="trailing" type="default" id="2xg-iC-CXg"/>
+                            <constraint firstItem="MiF-C8-1eO" firstAttribute="bottom" secondItem="mtG-Qm-PbJ" secondAttribute="bottom" type="default" id="kwZ-Yf-s89"/>
+                            <constraint firstItem="MiF-C8-1eO" firstAttribute="top" secondItem="mtG-Qm-PbJ" secondAttribute="top" type="default" id="p8o-8l-YtR"/>
+                            <constraint firstItem="MiF-C8-1eO" firstAttribute="leading" secondItem="mtG-Qm-PbJ" secondAttribute="leading" type="default" id="ykk-wO-ZsS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Section" id="mKL-Oc-BJU">
+                        <barButtonItem key="leftBarButtonItem" image="menu_button@2x.png" style="plain" id="N6J-fT-JZz">
+                            <connections>
+                                <segue destination="Doe-WS-Tx9" kind="push" id="Etm-pg-FP8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="search_button@2x.png" id="WcM-ii-GMb">
+                            <connections>
+                                <segue destination="2" kind="push" id="TjG-gp-vZC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WgH-cS-CFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350" y="689"/>
         </scene>
         <!--Main Navigation Controller-->
         <scene sceneID="ZtP-5H-ZVx">
@@ -230,15 +269,18 @@
         <image name="arrow_right@2x.png" width="12" height="19"/>
         <image name="collage@2x.jpg" width="928" height="360"/>
         <image name="grey_bar@2x.png" width="640" height="110"/>
-        <image name="menu_button@2x.png" width="39" height="32"/>
+        <image name="menu_button@2x.png" width="88" height="88"/>
         <image name="profile_photo@2x.png" width="300" height="250"/>
-        <image name="search_button@2x.png" width="31" height="31"/>
+        <image name="search_button@2x.png" width="88" height="88"/>
     </resources>
     <classes>
+        <class className="FeedSectionFocusViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FeedSectionFocusViewController.h"/>
+        </class>
         <class className="FeedViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FeedViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="mainSwipeView" candidateClass="SwipeView"/>
+                <relationship kind="outlet" name="_tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="MainNavigationController" superclassName="UINavigationController">
@@ -278,6 +320,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="92s-Bm-eeg"/>
+        <segue reference="TjG-gp-vZC"/>
+        <segue reference="Etm-pg-FP8"/>
     </inferredMetricsTieBreakers>
 </document>

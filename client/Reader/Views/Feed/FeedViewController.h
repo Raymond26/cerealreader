@@ -7,8 +7,12 @@
 #import <Foundation/Foundation.h>
 #import "SwipeView.h"
 
-@interface FeedViewController : UIViewController <SwipeViewDelegate, SwipeViewDataSource> {
-    IBOutlet SwipeView *mainSwipeView;
+@class FeedDTO;
+
+@interface FeedViewController : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+	IBOutlet UITableView *_tableView;
+
+	FeedDTO *_feedDTO;
 }
 
 @end

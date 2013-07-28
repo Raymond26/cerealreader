@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "RatingControl.h"
+#import "BookDTO.h"
 
-@interface FeedItemControl : UIView
+@interface FeedItemControl : UIView {
+	BookDTO *_book;
+}
 
 + (id)itemFromNib:(UINib*)nib;
+
+- (void)setBook:(BookDTO*)book;
 
 @property (retain) IBOutlet UIImageView *imageView;
 @property (retain) IBOutlet UILabel *titleLabel;
